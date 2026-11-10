@@ -39,7 +39,7 @@ ChatGPT·Claude 앱의 "메모리" 는 내 것이 아니다. 어디에 뭐가 �
 
 ### 1. 항상 켜둘 맥 + Claude Code CLI
 
-- 안 쓰는 맥북·맥미니 아무거나. 뚜껑 닫아도 안 자게: `sudo pmset -a sleep 0 disablesleep 1`
+- 안 쓰는 맥북·맥미니 아무거나. 뚜껑 닫아도 안 자게: `sudo pmset -a sleep 0 disablesleep 1`. 맥이 없으면 윈도우 PC + WSL2 도 된다 — [docs/windows.md](docs/windows.md).
 - Claude Code CLI 설치 후 `claude` 를 한 번 실행해 Max 구독 계정으로 로그인 (아래 "비용·계정" 참고).
 - Node 20.12 이상 (`node --env-file` 을 쓴다). `brew install node` 또는 nvm.
 - 확인: `claude -p "안녕" --output-format json` 이 JSON 을 뱉으면 됨.
@@ -109,7 +109,7 @@ bridge/               슬랙 Socket Mode ↔ claude -p   (index.js · .env.examp
 workers/              delegate.sh — worktree + nohup claude -p + 완료 DM
 collectors/           health-export-server.js · gcal-ics-dump.py
 scripts/              nightly-distill.sh · prompts/ · install-gitleaks-hook.sh
-docs/                 architecture.md (그림·교훈) · telegram.md · codex.md (OpenAI Codex CLI 로 바꾸기)
+docs/                 architecture.md (그림·교훈) · telegram.md · codex.md (OpenAI Codex CLI 로 바꾸기) · windows.md (WSL2·네이티브 윈도우)
 ```
 
 ## 비용·계정
