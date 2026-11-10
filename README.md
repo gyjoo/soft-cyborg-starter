@@ -47,7 +47,7 @@ ChatGPT·Claude 앱의 "메모리" 는 내 것이 아니다. 어디에 뭐가 �
 ### 2. 기억 레포 만들기
 
 ```sh
-git clone https://github.com/gyjoo/soft-cyborg-starter ~/soft-cyborg-starter
+git clone <이 레포 URL> ~/soft-cyborg-starter
 cd ~/soft-cyborg-starter
 cp -r memory-template ~/memory && cd ~/memory && git init && git add -A && git commit -m "init"
 ```
