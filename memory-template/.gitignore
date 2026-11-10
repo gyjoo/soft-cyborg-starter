@@ -1,0 +1,6 @@
+.secrets.env
+.env
+.sessions.json
+chat/*.jsonl
+health/*.json
+calendar/*.json

@@ -1,0 +1,8 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.secrets.env
+*.log
+.DS_Store
+bridge/.sessions.json
