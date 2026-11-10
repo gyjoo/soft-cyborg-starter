@@ -69,6 +69,7 @@ npm install && npm start
 - 토큰 없이 `npm start` 하면 뭐가 빠졌는지 알려주고 종료한다. 채우면 "연결됨" 이 뜨고, 슬랙에서 봇 DM 에 말을 걸면 답한다.
 - 세션은 채널별로 유지되고 8시간 쉬면 새로 시작한다. `/new` 로 강제 리셋.
 - 텔레그램이 편하면 [docs/telegram.md](docs/telegram.md) — 바뀌는 건 30줄.
+- Claude 대신 OpenAI Codex CLI 로 두뇌를 돌리려면 [docs/codex.md](docs/codex.md) — `codex exec` 치환·AGENTS.md·엔진 선택 기준.
 - 상시 실행은 `bridge/README.md` 의 launchd plist.
 
 ### 4. 데이터 소스 하나씩
@@ -95,6 +96,7 @@ npm install && npm start
 ```
 memory-template/      기억 레포 틀. 복사해서 본인 것으로 — 가상 인물 데이터
   CLAUDE.md           비서 규칙: 파일 지도·기록 원칙·시크릿 규율·톤
+  AGENTS.md           Codex 등 다른 에이전트용 진입점 한 줄 (CLAUDE.md 를 읽으라고만)
   ME.md               나는 누구 (200줄 이하)
   preferences.md      선호·습관·소통 방식
   projects.md         진행 중인 일
@@ -107,7 +109,7 @@ bridge/               슬랙 Socket Mode ↔ claude -p   (index.js · .env.examp
 workers/              delegate.sh — worktree + nohup claude -p + 완료 DM
 collectors/           health-export-server.js · gcal-ics-dump.py
 scripts/              nightly-distill.sh · prompts/ · install-gitleaks-hook.sh
-docs/                 architecture.md (그림·교훈) · telegram.md
+docs/                 architecture.md (그림·교훈) · telegram.md · codex.md (OpenAI Codex CLI 로 바꾸기)
 ```
 
 ## 비용·계정
